@@ -63,7 +63,44 @@ header {
     }
 
     /* Stack sections vertically on smaller screens */
-    section {
-        display: block;
-        width: 100%;
-        margin
+section {
+    display: block;
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+}
+
+/* Tabbed interface styles */
+.tabs {
+display: flex;
+justify-content: center;
+margin: 40px 0;
+}
+
+.tab {
+display: inline-block;
+padding: 10px 20px;
+background-color: #ddd;
+border-radius: 10px 10px 0 0;
+cursor: pointer;
+}
+
+.tab.active {
+background-color: #fff;
+}
+
+.tab-content {
+display: none;
+background-color: #fff;
+padding: 20px;
+border-radius: 0 0 10px 10px;
+}
+
+.tab-content.active {
+display: block;
+}
+
+
+
+
+
