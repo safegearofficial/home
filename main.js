@@ -42,47 +42,38 @@
   <!-- Create the tabbed interface -->
   <div class="tabbed-interface">
     <!-- Create the tabs -->
-    <div class="tab active" data-tab="tab-1">Tab 1</div>
-    <div class="tab" data-tab="tab-2">Tab 2</div>
-    <div class="tab" data-tab="tab-3">Tab 3</div>
+    <div class="tab active" id="tab-1" onclick="showTabContent('tab-1')">Tab 1</div>
+    <div class="tab" id="tab-2" onclick="showTabContent('tab-2')">Tab 2</div>
+    <div class="tab" id="tab-3" onclick="showTabContent('tab-3')">Tab 3</div>
   </div>
   <!-- Create the tab content -->
-  <div class="tab-content active" id="tab-1">
+  <div class="tab-content active" id="tab-1-content">
     <!-- Content for Tab 1 -->
     <p>This is the content for Tab 1</p>
   </div>
-  <div class="tab-content" id="tab-2">
+  <div class="tab-content" id="tab-2-content">
     <!-- Content for Tab 2 -->
     <p>This is the content for Tab 2</p>
   </div>
-  <div class="tab-content" id="tab-3">
+  <div class="tab-content" id="tab-3-content">
     <!-- Content for Tab 3 -->
     <p>This is the content for Tab 3</p>
   </div>
 
   <!-- Add the JavaScript code -->
   <script>
-    // Get all the tabs and tab content
-    const tabs = document.querySelectorAll(".tab");
-    const tabContents = document.querySelectorAll(".tab-content");
-
-    // Function to show the content for a specific tab
     function showTabContent(tabId) {
-      // Hide all the tab contents
+      const tabs = document.querySelectorAll(".tab");
+      const tabContents = document.querySelectorAll(".tab-content");
+      tabs.forEach((tab) => {
+        tab.classList.remove("active");
+      });
       tabContents.forEach((tabContent) => {
         tabContent.classList.remove("active");
       });
-      // Show the content for the selected tab
       document.getElementById(tabId).classList.add("active");
+      document.getElementById(tabId + "-content").classList.add("active");
     }
-
-    // Loop through all the tabs and add an event listener for when they are clicked
-    tabs.forEach((tab) => {
-      tab.addEventListener("click", () => {
-        // Remove the active class from all the tabs
-        tabs.forEach((tab) => {
-          tab.classList.remove("active");
-        });
-        // Add the active class to the selected tab
-        tab.classList.add("active");
-        //
+  </script>
+</body>
+</html>
