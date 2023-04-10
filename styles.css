@@ -7,7 +7,9 @@ body {
 /* Hero section styles */
 .hero {
     background-image: url('https://pbs.twimg.com/media/FtKOTyIakAAg8i7?format=jpg&name=large');
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
     color: white;
 }
@@ -32,4 +34,3 @@ body {
 .footer {
     text-align: center;
 }
-
