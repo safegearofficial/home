@@ -4,27 +4,17 @@ body {
     line-height: 1.6;
 }
 
-/* Header styles */
-.header {
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: center;
-}
-
 /* Hero section styles */
 .hero {
     background-image: url('path/to/your/hero-image.jpg');
     background-size: cover;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: white;
 }
 
-.hero-text {
-    color: white;
+.hero h1 {
     font-size: 48px;
-    text-align: center;
+    font-weight: bold;
 }
 
 /* Container styles */
@@ -40,12 +30,5 @@ body {
 
 /* Footer styles */
 .footer {
-    background-color: #f1f1f1;
-    padding: 20px;
     text-align: center;
 }
-
-
-
-
-
