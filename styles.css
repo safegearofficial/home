@@ -6,7 +6,7 @@ body {
 
 /* Hero section styles */
 .hero {
-    background-image: url('path/to/your/hero-image.jpg');
+    background-image: url('https://pbs.twimg.com/media/FtKOTyIakAAg8i7?format=jpg&name=large');
     background-size: cover;
     height: 100vh;
     color: white;
@@ -32,3 +32,4 @@ body {
 .footer {
     text-align: center;
 }
+
